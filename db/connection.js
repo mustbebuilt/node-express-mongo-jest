@@ -1,5 +1,7 @@
 const { MongoClient } = require("mongodb");
-const Db = "mongodb://127.0.0.1:27017";
+// const Db = "mongodb://127.0.0.1:27017";
+const Db = process.env.DATABASE_URL
+const DbName = process.env.DATABASE_NAME
 const client = new MongoClient(Db, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -12,7 +14,7 @@ module.exports = {
     client.connect(function (err, db) {
       // Verify we got a good "db" object
       if (db) {
-        dbConnection = db.db("myMoviesDb");
+        dbConnection = db.db(DbName);
         console.log("Successfully connected to MongoDB.");
       }
       return callback(err);
