@@ -1,9 +1,7 @@
 const express = require("express");
 const path = require("path");
 const port = 3000;
-const SessionDb =
-  "mongodb+srv://mjcAtlas01:Uy78Hq234%24g@mycluster01.ica5f.azure.mongodb.net/" +
-  "myTestSession";
+const SessionDb = process.env.SESSION_STORAGE;
 // mongodb+srv://mjcAtlas01:<password>@mycluster01.ica5f.azure.mongodb.net/?retryWrites=true&w=majority
 const app = express();
 

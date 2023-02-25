@@ -1,10 +1,7 @@
 const { MongoClient } = require("mongodb");
 // const Db = "mongodb://127.0.0.1:27017";
-// const Db = process.env.DATABASE_URL;
-// const DbName = process.env.DATABASE_NAME;
-const Db =
-  "mongodb+srv://mjcAtlas01:Uy78Hq234%24g@mycluster01.ica5f.azure.mongodb.net/test?authSource=admin&replicaSet=atlas-10tw20-shard-0&readPreference=primary&ssl=true";
-const DbName = "myMoviesDb";
+const Db = process.env.DATABASE_URL;
+const DbName = process.env.DATABASE_NAME;
 const client = new MongoClient(Db, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
