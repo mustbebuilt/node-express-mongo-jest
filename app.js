@@ -1,7 +1,10 @@
 const express = require("express");
 const path = require("path");
 const port = 3000;
-
+const SessionDb =
+  "mongodb+srv://mjcAtlas01:Uy78Hq234%24g@mycluster01.ica5f.azure.mongodb.net/" +
+  "myTestSession";
+// mongodb+srv://mjcAtlas01:<password>@mycluster01.ica5f.azure.mongodb.net/?retryWrites=true&w=majority
 const app = express();
 
 // add for RESTful
@@ -29,7 +32,8 @@ app.use(
     resave: true,
     saveUninitialized: true,
     store: new MongoStore({
-      url: "mongodb://127.0.0.1:27017/myTestSession",
+      // url: "mongodb://127.0.0.1:27017/myTestSession",
+      url: SessionDb,
     }),
   })
 );
