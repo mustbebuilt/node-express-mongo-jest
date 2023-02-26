@@ -95,7 +95,6 @@ module.exports = () => {
         return res.render("signup", {
           title: "Register",
           loginMsg: erMsg,
-          login: req.session.login,
         });
       }
       myControllers.signup(req, res);
