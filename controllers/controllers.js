@@ -251,7 +251,7 @@ module.exports = {
         { _id: o_id },
         {
           $set: {
-            filmTitle: amendFilm.filmTitle,
+            filmName: amendFilm.filmName,
             filmCertificate: amendFilm.filmCertificate,
             filmDescription: amendFilm.filmDescription,
             filmImage: amendFilm.filmImage,
