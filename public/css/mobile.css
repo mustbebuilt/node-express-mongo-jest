@@ -6,6 +6,9 @@ body {
     margin:0;
     padding:0;
 }
+header, .container, footer{
+    margin:0 5px;
+}
 header {
     background-color: #ccc;
     overflow: auto;
@@ -45,4 +48,11 @@ td,th{
 }
 .hide {
     display: none;
+}
+footer{
+    border-top:1px solid #ccc;
+    padding-top:5px;
+    margin-top:10px;
+    text-align: center;
+    font-size: 0.9rem;
 }

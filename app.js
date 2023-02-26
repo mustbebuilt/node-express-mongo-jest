@@ -2,7 +2,6 @@ const express = require("express");
 const path = require("path");
 const port = process.env.PORT || 3000;
 const SessionDb = process.env.SESSION_STORAGE;
-// mongodb+srv://mjcAtlas01:<password>@mycluster01.ica5f.azure.mongodb.net/?retryWrites=true&w=majority
 const app = express();
 
 // add for RESTful
