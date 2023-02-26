@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/2a734a03-ee4b-4f1b-bf51-eab1a122ce7c/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/simple-express-mbb",
+    "appService.deploySubpath": "."
+}
