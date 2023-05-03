@@ -177,10 +177,12 @@ module.exports = {
           bcrypt.hash(req.body.password, saltRounds, function (err, hash) {
             let hashedPwd = hash;
             let newUser = { name: username, password: hashedPwd };
+            console.dir(newUser);
             dbo
               .getDb()
               .collection("appUsers")
               .insertOne(newUser, function (err, dbResp) {
+                console.dir(dbResp);
                 if (err) {
                   console.error(err);
                 }

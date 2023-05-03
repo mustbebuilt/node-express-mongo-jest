@@ -1,62 +1,6 @@
-# Demo Azure Deployment
+# JEST TEST
 
-Based on:
-[https://learn.microsoft.com/en-us/azure/app-service/quickstart-nodejs?tabs=windows&pivots=development-environment-vscode](https://learn.microsoft.com/en-us/azure/app-service/tutorial-nodejs-mongodb-app)
+Test User: test@test.com
+Test p/w: tEst123
 
-# Sample Node Express Mongo App
-
-Useful Mongo db Commands
-
-Delete from All Collection
-
-db.collection.remove({})
-
-## MongoDb Compass
-
-Set up requires a local copy of MongoDb. Best achieved with MongoDb Compass.
-
-https://www.mongodb.com/products/compass
-
-## Community Server
-
-https://www.mongodb.com/docs/manual/administration/install-community/
-
-https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x-tarball/
-
-Extracted into Downloads and then cp to usr
-
-sudo cp /path/to/the/mongodb-directory/bin/\* /usr/local/bin/
-
-ie
-sudo cp /Users/martincooper/Downloads/mongodb-macos-x86_64-5.0.9/bin/\* /usr/local/bin/
-sudo mkdir -p /usr/local/var/mongodb
-sudo mkdir -p /usr/local/var/mongodb
-
-## Use on MAC when in /usr/local/var/
-
-sudo mongod --dbpath /usr/local/var/mongodb --logpath /usr/local/var/log/mongodb/mongo.log
-
-mongod --config /usr/local/etc/mongod.conf --fork
-
-## Run Mongo
-
-STEP ONE:
-mongod
-
-STEP TWO:
-mongo
-
-STEP THREE:
-(Terminal)
-mongoimport --db filmsDb --collection filmsCollection --jsonArray --file movies.json
-
-STEP FOUR:
-use filmsDb
-show filmsCollection
-db.filmsCollection.find()
-
-In node
-
-STEP ONE:
-Get client
-npm install mongodb --save
+Jest with `--detectOpenHandles

@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const port = process.env.PORT || 3000;
-const SessionDb = process.env.SESSION_STORAGE;
+const SessionDb = process.env.SESSION_STORAGE || "mongodb://127.0.0.1:27017/filmAppSession";
 const app = express();
 
 // add for RESTful
@@ -29,7 +29,6 @@ app.use(
     resave: true,
     saveUninitialized: true,
     store: new MongoStore({
-      // url: "mongodb://127.0.0.1:27017/myTestSession",
       url: SessionDb,
     }),
   })

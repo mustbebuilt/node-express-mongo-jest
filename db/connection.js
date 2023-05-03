@@ -1,7 +1,7 @@
 const { MongoClient } = require("mongodb");
-// const Db = "mongodb://127.0.0.1:27017";
-const Db = process.env.DATABASE_URL;
-const DbName = process.env.DATABASE_NAME;
+const Db = process.env.DATABASE_URL || "mongodb://127.0.0.1:27017";
+//const Db = process.env.DATABASE_URL;
+const DbName = process.env.DATABASE_NAME || "moviesDb";
 const client = new MongoClient(Db, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
